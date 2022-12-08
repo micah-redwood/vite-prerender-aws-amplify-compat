@@ -1,10 +1,16 @@
-import React from 'react'
-import { navigate } from 'vite-plugin-ssr/client/router'
-import { Counter } from '../components/Counter'
+import React from 'react';
+import { navigate } from 'vite-plugin-ssr/client/router';
 
-export default { Page }
+import { useAuthenticator } from '@aws-amplify/ui-react';
+
+import { Counter } from '../components/Counter';
+
+export default { Page };
 
 function Page() {
+  console.log("Importing modules from @aws-amplify/ui-react", {
+    useAuthenticator,
+  });
   return (
     <>
       <h1>
@@ -18,16 +24,17 @@ function Page() {
         </li>
       </ul>
       <p>
-        We <code>export const clientRouting = true</code> to enable Client Routing.{' '}
+        We <code>export const clientRouting = true</code> to enable Client
+        Routing.{" "}
         <button
           onClick={() => {
-            const randomIndex = Math.floor(Math.random() * 3)
-            navigate(['/markdown', '/star-wars', '/hello/alice'][randomIndex])
+            const randomIndex = Math.floor(Math.random() * 3);
+            navigate(["/markdown", "/star-wars", "/hello/alice"][randomIndex]);
           }}
         >
           Random Page
         </button>
       </p>
     </>
-  )
+  );
 }
