@@ -25,7 +25,7 @@
     "vite-plugin-ssr": "0.4.54"
   },
   "type": "module",
-  "name": "vite-prerender-react-amplify-ui",
+  "name": "vite-prerender-aws-amplify-compat",
   "description": "React example showcasing many features.",
   "version": "1.0.0",
   "main": "index.js",
